@@ -84,13 +84,13 @@ class Borrowable extends BookBase {
   }
 }
 
-let library = new Library("The HP library");
+let library = new Library("The best Books library");
 
-let hp1 = new Borrowable("HP1", 2.5);
-library.books.push(hp1);
-library.books.push(new Borrowable("HP2", 2));
-library.books.push(new Borrowable("HP3", 3));
-library.books.push(new Borrowable("HP4", 4));
+let book1 = new Borrowable("Book1", 2.5);
+library.books.push(book1);
+library.books.push(new Borrowable("Book2", 2));
+library.books.push(new Borrowable("Book", 3));
+library.books.push(new Borrowable("Book", 4));
 
 // let fbwtft = new NonBorrowable('Fantastic Beasts and Where to Find Them');
 library.books.push(
@@ -98,8 +98,8 @@ library.books.push(
 );
 library.books.push(new NonBorrowable("Quidditch Throughout the Ages"));
 
-hp1.borrow(new User("משה כהן", library), 5);
-// hp1.borrow(new User('משה כהן', library), 'abcd');
+book1.borrow(new User("karin", library), 5);
+// book1.borrow(new User('karin, library), 'abcd');
 // fbwtft.borrow();
 
 library.print();
